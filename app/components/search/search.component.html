@@ -10,7 +10,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="search-res well">
-					<h5><a href="#">{{res.name}}</a></h5>
+					<h5><a routerLink="/artist/{{res.id}}">{{res.name}}</a></h5>
 					<span *ngFor="let genres of res.genres" class="label label-default genre-span">{{genres}}</span>
 				</div>
 			</div>

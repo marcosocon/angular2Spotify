@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import { SpotifyService } from '../../services/spotify.service';
-import { Artist } from '../,,/../Artist';
+import { Artist } from '../../../Artist';
 
 @Component({
 	moduleId: module.id,
@@ -22,7 +22,6 @@ export class SearchComponent {
 		this._spotifyService.searchMusic(this.searchStr)
 			.subscribe(res =>{
 				this.searchResults = res.artists.items;
-				console.log(this.searchResults)
 			})
 
 	}

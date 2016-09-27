@@ -9,6 +9,7 @@ import { SpotifyService } from './services/spotify.service';
 
 
 import { NavbarComponent }  from './components/navbar/navbar.component';
+import { ArtistComponent }  from './components/artist/artist.component';
 import { AboutComponent }  from './components/about/about.component';
 import { SearchComponent }  from './components/search/search.component';
 
@@ -16,7 +17,7 @@ import { SearchComponent }  from './components/search/search.component';
 
 @NgModule({
 	imports: [ BrowserModule, FormsModule, HttpModule, routes ],
-	declarations: [ AppComponent, NavbarComponent, AboutComponent, SearchComponent ],
+	declarations: [ AppComponent, NavbarComponent, AboutComponent, SearchComponent, ArtistComponent ],
 	providers: [ appRoutingProviders, SpotifyService ],
 	bootstrap: [ AppComponent ]
 })
