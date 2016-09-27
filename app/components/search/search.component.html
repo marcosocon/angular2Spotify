@@ -1,8 +1,14 @@
-<div class="col-lg-8 col-lg-offset-2">
-	<div class="input-group">
-		<input type="text" class="form-control" placeholder="Search for...">
-		<span class="input-group-btn">
-			<button class="btn btn-default" type="button">Search!</button>
-		</span>
-	</div><!-- /input-group -->
-</div><!-- /.col-lg-6 -->
+<div class="col-lg-10 col-lg-offset-1">
+	<form>
+		<div class="form-group">
+			<input type="text" class="form-control" name="searchStr" placeholder="Search in Spotify..." [(ngModel)]="searchStr" (keyup)="searchMusic()">
+		</div>
+	</form>
+</div>
+<div *ngIf="results">
+	<div *ngFor="let res of results">
+		<p>
+			{{res.name}}
+		</p>
+	</div>
+</div>
