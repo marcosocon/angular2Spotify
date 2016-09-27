@@ -1,14 +1,18 @@
-<div class="col-lg-10 col-lg-offset-1">
+<div class="col-md-10 col-md-offset-1">
 	<form>
 		<div class="form-group">
 			<input type="text" class="form-control" name="searchStr" placeholder="Search in Spotify..." [(ngModel)]="searchStr" (keyup)="searchMusic()">
 		</div>
 	</form>
 </div>
-<div *ngIf="results">
-	<div *ngFor="let res of results">
-		<p>
-			{{res.name}}
-		</p>
-	</div>
+<div *ngIf="searchResults">
+	<div *ngFor="let res of searchResults">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="search-res well">
+					<h5><a href="#">{{res.name}}</a></h5>
+					<span *ngFor="let genres of res.genres" class="label label-default genre-span">{{genres}}</span>
+				</div>
+			</div>
+		</div>
 </div>
