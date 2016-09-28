@@ -1,3 +1,38 @@
 <div *ngIf="artist">
-	<h3>{{artist.name}}</h3>
+	<div class="row">
+		<div class="col-xs-6 col-md-3">
+			<div class="artist-thumb thumbnail" *ngIf="artist.images.length > 0">
+				<img src="{{artist.images[0].url}}" alt="" />
+			</div>
+		</div>
+		<div class="col-xs-6 col-md-6">
+			<h1>{{artist.name}}</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="artist info">
+				<span>Followers : {{artist.followers.total}}</span>
+				<br>
+				<span>Popularity : {{artist.popularity}}</span>
+				<br>
+				<a href="{{artist.external_urls.spotify}}"><button type="button" class="btn btn-default">View on Spotify</button></a>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<div *ngFor="let album of albums">
+				<div class="col-md-3">
+					<div class="well album">
+						<div *ngIf="album.images.length > 0" >
+							<img src="{{album.images[0].url}}" alt="" class="thumbnail" style="width:200px"/>
+						</div>
+						<h4>{{album.name}}</h4>
+						<a href="{{artist.external_urls.spotify}}"><button type="button" class="btn btn-default">Album Details</button></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
