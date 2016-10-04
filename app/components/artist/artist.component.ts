@@ -14,7 +14,7 @@ import { ActivatedRoute } from '@angular/router';
 export class ArtistComponent {
 	id: string;
 	artist: Artist[];
-	album: Album[];
+	albums: Album[];
 	constructor(
 		private _route : ActivatedRoute,
 		private _spotifyService: SpotifyService){
